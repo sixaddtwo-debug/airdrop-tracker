@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaMask Setup Guide 🫡</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a0f; color: #fff; padding: 20px; max-width: 600px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; padding-top: 20px; }
+        .header h1 { font-size: 1.8em; color: #ff4757; }
+        .header p { color: #a0a0a0; margin-top: 5px; font-size: 0.9em; }
+        .step { background: #1a1a2e; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #333; }
+        .step-number { display: inline-block; background: #ff4757; color: white; width: 30px; height: 30px; border-radius: 50%; text-align: center; line-height: 30px; font-weight: bold; margin-bottom: 10px; }
+        .step h3 { color: #ff4757; margin-bottom: 12px; font-size: 1.1em; }
+        .step p, .step li { color: #ccc; line-height: 1.6; margin-bottom: 8px; font-size: 0.95em; }
+        .step ol, .step ul { margin-left: 20px; }
+        .step li { margin-bottom: 10px; }
+        .highlight { background: #2a1810; border-left: 3px solid #ff4757; padding: 12px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+        .highlight p { color: #ffaaa0; margin: 0; font-size: 0.9em; }
+        .code-block { background: #0f0f1a; padding: 15px; border-radius: 8px; margin: 10px 0; font-family: monospace; font-size: 0.85em; color: #00ff88; word-break: break-all; }
+        .btn { display: inline-block; padding: 12px 24px; background: #ff4757; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 10px 0; font-size: 0.95em; }
+        .warning { background: #2a1810; border: 1px solid #ff4757; border-radius: 8px; padding: 15px; margin-bottom: 20px; color: #ffaaa0; font-size: 0.9em; }
+        .emoji-big { font-size: 2em; margin-bottom: 10px; display: block; }
+        .screenshot-desc { background: #0f0f1a; border: 1px dashed #444; padding: 15px; border-radius: 8px; text-align: center; color: #888; font-style: italic; margin: 10px 0; }
+        .nav { display: flex; gap: 10px; margin-bottom: 20px; overflow-x: auto; }
+        .nav-item { padding: 8px 16px; background: #1a1a2e; border-radius: 20px; color: #888; font-size: 0.85em; white-space: nowrap; }
+        .nav-item.active { background: #ff4757; color: white; }
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            .step { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="emoji-big">🦊</span>
+        <h1>MetaMask + Ink Setup</h1>
+        <p>For mobile users | Total time: 5 minutes</p>
+    </div>
+
+    <div class="warning">
+        ⚠️ <strong>IMPORTANT:</strong> Use a FRESH wallet (create new). Don't use a wallet with real money for airdrops!
+    </div>
+
+    <!-- PART 1: GET METAMASK -->
+    <div class="step">
+        <span class="step-number">1</span>
+        <h3>Download MetaMask (if you don't have it)</h3>
+        <ul>
+            <li>iPhone: <strong>App Store</strong> → Search "MetaMask"</li>
+            <li>Android: <strong>Play Store</strong> → Search "MetaMask"</li>
+            <li>Make sure it's the REAL one (10M+ downloads, by Consensys)</li>
+        </ul>
+        <div class="screenshot-desc">[ Search bar → Type "MetaMask" → Download button ]</div>
+    </div>
+
+    <!-- PART 2: CREATE WALLET -->
+    <div class="step">
+        <span class="step-number">2</span>
+        <h3>Create a New Wallet (5 mins)</h3>
+        <ol>
+            <li>Open MetaMask app → Tap <strong>"Create a new wallet"</strong></li>
+            <li>Set a <strong>password</strong> (this is just for the app, write it down)</li>
+            <li>It will show you <strong>12 secret words</strong> (SEED PHRASE)</li>
+        </ol>
+        <div class="highlight">
+            <p>🔥 <strong>CRITICAL:</strong> Write those 12 words on PAPER. Not screenshot, not photo. PAPER. If you lose these words, you lose everything forever.</p>
+        </div>
+        <ol start="4">
+            <li>Tap the words in the CORRECT order to confirm</li>
+            <li>Wallet created! You'll see a long address like: <br><code style="color:#00ff88">0x742d35Cc...3F4a</code></li>
+        </ol>
+    </div>
+
+    <!-- PART 3: ADD INK NETWORK -->
+    <div class="step">
+        <span class="step-number">3</span>
+        <h3>Add Ink Testnet to MetaMask</h3>
+        <p><strong>This is the most important part!</strong> Follow exactly:</p>
+        
+        <ol>
+            <li>Tap the <strong>network name</strong> at the TOP of MetaMask (says "Ethereum Mainnet")</li>
+            <li>Tap <strong>"Add network"</strong> at the bottom</li>
+            <li>Tap <strong>"Add custom network"</strong> or "Custom RPC"</li>
+            <li>Fill in these EXACT values:</li>
+        </ol>
+
+        <div class="code-block">
+Network Name:<br>
+<strong>Ink Sepolia</strong><br><br>
+
+RPC URL (copy this exactly):<br>
+<strong>https://rpc-gel-sepolia.inkonchain.com</strong><br><br>
+
+Chain ID (type number):<br>
+<strong>763373</strong><br><br>
+
+Currency Symbol:<br>
+<strong>ETH</strong><br><br>
+
+Block Explorer URL (optional):<br>
+<strong>https://explorer-sepolia.inkonchain.com</strong>
+        </div>
+
+        <ol start="5">
+            <li>Tap <strong>"Save"</strong></li>
+            <li>Done! You should see "Ink Sepolia" at the top now</li>
+        </ol>
+        <div class="screenshot-desc">[ Tap top bar → Add Network → Fill boxes → Save ]</div>
+    </div>
+
+    <!-- PART 4: GET FREE ETH -->
+    <div class="step">
+        <span class="step-number">4</span>
+        <h3>Get FREE Testnet ETH (Faucet)</h3>
+        <ol>
+            <li>Go to <a href="https://www.inkonchain.com/faucet" class="btn">Ink Faucet</a> (in your phone browser)</li>
+            <li>Tap <strong>"Connect Wallet"</strong> or paste your wallet address</li>
+            <li>Your wallet address: Tap MetaMask → Tap to COPY the address (0x...)</li>
+            <li>Paste it in the faucet website</li>
+            <li>Tap <strong>"Request"</strong> or "Get ETH"</li>
+            <li>Wait 30 seconds → Check MetaMask, you should have 0.05 ETH</li>
+        </ol>
+        <div class="highlight">
+            <p>💡 If faucet is empty, try this backup: <a href="https://faucet.quicknode.com/ink/sepolia" style="color:#ff4757">QuickNode Faucet</a></p>
+        </div>
+    </div>
+
+    <!-- PART 5: DO TRANSACTIONS -->
+    <div class="step">
+        <span class="step-number">5</span>
+        <h3>Do Transactions (Qualify for Airdrop)</h3>
+        <p><strong>Now the fun part!</strong> Go to <a href="https://inkonchain.com" class="btn">Ink Portal</a></p>
+        <ol>
+            <li>Connect your MetaMask (tap "Connect Wallet" on the site)</li>
+            <li>Find the <strong>Bridge</strong> section</li>
+            <li>Bridge 0.001 ETH (testnet) → This is the MAIN task</li>
+            <li>Confirm in MetaMask (it's free, testnet!)</li>
+            <li>Wait for it to complete (1-2 minutes)</li>
+            <li>Do a <strong>swap</strong> (trade ETH for another token)</li>
+            <li>Do at least <strong>3-5 transactions total</strong></li>
+        </ol>
+        <div class="highlight">
+            <p>🏆 <strong>You're now qualified for the Ink airdrop IF they launch a token!</strong></p>
+        </div>
+    </div>
+
+    <!-- PART 6: WHAT NEXT -->
+    <div class="step">
+        <span class="step-number">6</span>
+        <h3>What's Next?</h3>
+        <ul>
+            <li>✅ Screenshot your transactions as proof</li>
+            <li>✅ Follow <a href="https://x.com/inkonchain" style="color:#ff4757">@inkonchain on X/Twitter</a></li>
+            <li>✅ Do more transactions weekly (stay active)</li>
+            <li>✅ Come back tomorrow for the NEXT airdrop campaign</li>
+        </ul>
+        <div class="highlight">
+            <p>📱 Text me "Done Ink" when you finish and I'll update your tracker!</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 30px; color: #888;">
+        <p style="font-size: 1.2em; margin-bottom: 10px;">⚡ Forward is enough!</p>
+        <p style="font-size: 0.9em;">Built by mimi | For your human</p>
+    </div>
+</body>
+</html>
